@@ -1,0 +1,16 @@
+<div class="tabs">
+  <a class="tab <%= 'active' if @currency === 'usd' %>" href="/?currency=usd">USD</a>
+  <a class="tab <%= 'active' if @currency === 'eur' %>" href="/?currency=eur">EUR</a>
+  <a class="tab <%= 'active' if @currency === 'rur' %>" href="/?currency=rur">RUR</a>
+</div>
+
+<svg width="960" height="500"></svg>
+
+<script type="text/javascript">
+    var data = <%=raw @logs.to_json %>;
+    var currency = "<%= @currency %>";
+    data = data.map(Number);
+
+    App.graph.init(currency, "svg");
+    App.graph.draw(data);
+</script>

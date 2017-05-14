@@ -1,0 +1,52 @@
+.line {
+  fill: none;
+  stroke: #000;
+  stroke-width: 0.5px;
+}
+
+.tabs {
+  width: 970px;
+
+  .tab {
+    display: inline-block;
+    position: relative;
+    width: 320px;
+    height: 50px;
+
+    float: left;
+    margin-left: 5px;
+    padding: 0;
+
+    text-align: center;
+    line-height: 50px;
+    text-decoration: none;
+
+    background-color: #d1d9e0;
+    color: #5b6e85;
+    cursor: pointer;
+
+    .preload {
+      display: inline-block;
+      position: absolute;
+      height: 20px;
+      width: 20px;
+      right: 10px;
+      top: 15px;
+      background: url(image_path('preload.gif')) no-repeat center center;
+    }
+  }
+
+  .tab.active {
+    font-weight: 600;
+  }
+
+  .tab:nth-child(1) {
+    margin-left: 0;
+  }
+}
+
+.tabs:after {
+  content: ' ';
+  clear: both;
+  display: table;
+}

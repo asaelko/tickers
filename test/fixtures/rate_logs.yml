@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  currency: MyString
+  rate: 9.99
+  actual_date: 2017-05-11 23:11:17
+
+two:
+  currency: MyString
+  rate: 9.99
+  actual_date: 2017-05-11 23:11:17
